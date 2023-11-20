@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranokala - Acceuil</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #202124;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .div_form{
+            background-color: #ffffff39;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 500px;
+            height: 500px;
+            margin-top: 200px;
+            margin-left: 150px;
+            margin-right: 150px;
+            box-shadow: 0px 5px 20px black;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .inp{
+            background-color: #ffffff39;
+            border:none;
+            outline: none;
+            border-radius: 10px;
+            height: 30px;
+            width: 300px;
+            margin: 5px;
+            padding: 5px;
+            z-index: 10;
+        }
+        .submit{
+            height: 40px;
+            width: 280px;
+            border-radius: 10px;
+            margin: 20px;
+            background-color: #ffffff39;
+            border:none;
+            outline: none;
+        }
+        .submit:hover{
+            background-color: yellowgreen;
+        }
+        .in_line{
+            display: flex;
+        }
+        .inscription{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .logo{
+            background: url(../photo/Tranokala_logo_principale-removebg-preview.png);
+            position: relative;
+            top: 150px;
+            left: 150px;
+            width: 500px;
+            height: 500px;
+        }
+        .left{
+            background-color: #ffffff39;
+            width: 750px;
+            height: 788px;
+            box-shadow: 0 -5px 10px black;
+        }
+        .all{
+            display: flex;
+            flex-direction: row;
+        }
+        .connexion{
+            background:url(../photo/connexion-removebg-preview.png);
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="div_form">   
+            <form action="../cgi/connexion.cgi" class="form" method="post">
+                <div class="connexion"></div>
+                <input type="text" placeholder="Username" class="inp" name="username">
+                <input type="password" placeholder="Password" class="inp" name="password">
+                <button type="submit" class="submit">Connexion</button>
+            </form>
+            <div class="in_line">
+                <label >Avez vous déja un compte ? </label>
+                <a href="../htmls/inscription.html" class="inscription">S'inscrire</a>
+            </div>
+        </div>
+        <div class="left">
+            <div class="logo"></div>
+        </div>
+    </div>
+</body>
+</html>

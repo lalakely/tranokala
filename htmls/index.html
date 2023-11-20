@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranokala - Créer</title>
+    <style>
+        body{
+            background-color:#202124;
+            width: cover;
+            height: cover;
+            margin: 0;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .div_form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10px;
+        }
+        .inp{
+            background-color: #ffffff39;
+            border:none;
+            outline: none;
+            border-radius: 10px;
+            height: 30px;
+            width: 200px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .button{
+            background-color: #ffffff39;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            height: 40px;
+            width: 47vw;
+            display: flex;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;   
+        }
+        button:hover{
+            background-color: yellowgreen;
+        }
+        .conteneur_form{
+            background-color: #ffffff39;
+            width: 787px;
+            min-height: 787px;
+            box-shadow:10px 0px 5px #18191b;
+            display: inline-block;
+        }    
+        .label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:30px;
+            background-color: #ffffff39;
+            width: 400px;
+            height: 1px;
+            border-radius: 10px;
+        }
+        .check{
+            display: flex;
+            color:#ffffff;
+        }
+        .div_button{
+            display: flex;
+            justify-content: center;
+        }
+        .imlogo{
+            background: url(../photo/Tranokala_logo_principale-removebg-preview.png);
+            width: 500px;
+            height: 500px;
+            position:relative;
+            left:20px;
+        }
+        .div_creer{
+            display: flex;
+        }
+        .div_imlogo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 700px;
+            position:fixed;
+            left:800px;
+            top:150px;
+        }
+        .line{
+            display: flex;
+            flex-direction: row;
+        }
+        #form_2{
+            display: none;
+        }
+        .before_label{
+            margin: 15px;
+        }
+        .tab{
+            margin-left: 60px;
+        }
+        .divip{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+        .conteneur_label{
+            display: flex;
+            justify-content: center;
+        }
+        .nav_button{
+            text-decoration: none;
+            color: black;
+            background-color: #ffffff39;
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .nav_button:hover{
+            background-color: yellowgreen;
+        }
+        .conteneur_nav_button{
+            display: flex;
+            position: fixed;
+            left: 1000px;
+        }
+        .deconnexion{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            background-color: yellowgreen;
+            width: 130px;
+            height: 40px;
+            border-radius: 30px;
+        }
+        .deconnexion:hover{
+            background-color: red;
+            font-weight: bold;
+        }
+        .login_cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 50px;
+            background-color: #ffffff39;
+            position: relative;
+            top:15px;
+            border-radius: 30px;
+        }
+        .username{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-right: 10px;
+            color: white;
+        }
+        .home{
+            border-radius: 30px;
+            position: relative;
+            top: 5px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteneur_nav_button">
+        <a href="../cgi/home.cgi" class="nav_button home">
+            <div >Home</div>
+        </a>    
+        <div class="login_cont">
+            <p class="username">Username</p>
+            <a href="../cgi/connexion.cgi" class="deconnexion nav_button">Deconnexion</a>
+        </div>
+       </a>
+    </div>
+    <div class="div_creer">
+        <div class="conteneur_form">
+            <div class="conteneur_label">
+                <h2 class="label">Configurez ici votre site</h2>
+            </div>
+            <form action="./cgi/tranokala.cgi" method="get" class="div_form">
+                <label ><<label>VirtualHost *:80></label></label>
+                <div class="line tab">
+                    <label class="before_label">ServerName</label>
+                    <label class="before_label">www.</label>
+                    <input type="text" name="a" placeholder="Server Name" class="inp">
+                    <label class="before_label">.com</label>
+                    </div>
+                <div class="line tab">
+                    <label class="before_label">ServerAdmin</label>
+                    <input type="text" name="b" placeholder="Server Admin" class="inp">
+                    <label class="before_label">@</label>
+                    <input type="text" name="c" placeholder="host" class="inp">
+                </div>  
+                <div class="line tab">
+                  <label class="before_label">DocumentRoot</label>
+                    <input type="text" name="d" placeholder="Document Root" class="inp">
+                </div>
+                <div class="line tab">
+                    <label class="before_label">ScriptAlias</label>
+                    <input type="text" name="e" placeholder="Script" class="inp">
+                    <input type="text" name="f" class="inp" placeholder="Alias">
+                </div>
+                <div class="line tab">
+                    <input type="checkbox" name="g" id="form" class="checkbox">
+                    <label class="before_label"><<label>Directory</label></label>
+                    <input type="text" name="h" class="inp form_2" placeholder="Directory">
+                    <label class="before_label">></label>
+                </div>
+                <div id="form_2">
+                    <div class="line tab">
+                        <label class="before_label">Options</label>
+                        <div class="check">
+                            <div id="Ind">
+                                <input type="text" name="j" class="inp" placeholder="Options type">   
+                            </div>
+                        </div> 
+                    </div>  
+                    <div class="line tab">
+                        <label class="before_label">AllowOverride</label>
+                        <div id="allow_2">
+                            <input type="text" name="l" placeholder="type of AllowOverride" class="inp">
+                        </div>
+                    </div>
+                    <div class="line tab">
+                        <label class="before_label">SetHandler</label>
+                        <div id="handler_2">
+                            <input type="text" name="n" placeholder="type for SetHandler" class="inp">
+                        </div>  
+                    </div>
+                    <div class="line tab">
+                        <label class="before_label">AddHandler</label>
+                        <div id="add_2">
+                            <div class="line">
+                                <div class="check">
+                                    <input type="text" name="p" placeholder="Handler" class="inp">
+                                </div> 
+                                <div class="check">
+                                    <input type="text" name="q" placeholder="Handler type" class="inp">
+                                </div> 
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="line tab">
+                      <label class="before_label">Require</label>
+                        <div id="require_2">
+                            <input type="text" name="s" placeholder="Require" class="inp">
+                        </div>
+                    </div>    
+                    <label class="tab"><<label>/Directory></label></label>
+                </div> 
+                <label class="tab">
+                    ErrorLog ${APACHE_LOG_DIR}/error.log
+                </label>
+                <label class="tab">
+                    CustomLog ${APACHE_LOG_DIR}/access.log combined
+                </label> 
+                <label ><<label>/VirtualHost></label></label>
+                <div class="divip">
+                    <input type="text" name="t" placeholder="IP" class="inp">
+                </div>
+                <div class="div_button">
+                    <button type="submit" class="button">Créer</button>
+                </div> 
+            </form>
+        </div>
+        <div class="div_imlogo">
+            <div class="imlogo"></div>
+        </div>
+        <script>
+            const form = document.getElementById('form');
+            const form_2 = document.getElementById('form_2');
+
+            form.addEventListener('change', function() {
+                if (form.checked) {
+                    form_2.style.display = 'block';
+                } else {
+                    form_2.style.display = 'none';
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

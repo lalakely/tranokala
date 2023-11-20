@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranokala - Home</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #202124;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav{
+            background-color: #ffffff39;
+            height: 80px;
+            width: cover;
+            display: flex;
+        }
+        .logo{
+            background: url(../photo/tranokala_label_only-removebg-preview.png);
+            background-size: cover;
+            background-position: center;
+            height: 60px;
+            width: 110px;
+            position: relative;
+            top: 5px;
+            left: 5px;
+        }
+        .inp{
+            background-color: #ffffff39;
+            border: none;
+            outline: none;
+            width: 500px;
+            height: 30px;
+            margin-top: 15px;
+            margin-left: 200px;
+            padding: 10px;
+            border-radius: 30px;
+        }
+        .button{
+            width: 100px;
+            height: 50px;
+            outline: none;
+            border: none;
+            background-color: #ffffff91;
+            position: relative;
+            left: 10px;
+            border-radius: 30px;
+        }
+        .button:hover{
+            background-color: yellowgreen;
+        }
+        .login_cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 50px;
+            background-color: #ffffff39;
+            position: relative;
+            left: 200px;
+            top:15px;
+            border-radius: 30px;
+        }
+        .deconnexion{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            background-color: yellowgreen;
+            width: 130px;
+            height: 40px;
+            border-radius: 30px;
+        }
+        .deconnexion:hover{
+            background-color: red;
+            font-weight: bold;
+        }
+        .username{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-right: 10px;
+            color: white;
+        }
+        .tab{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 20px;
+        }
+        table{
+            border-spacing: 10px;
+        }
+        td{
+            background-color: #ffffff25;
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border-radius: 30px;
+            text-align: center;
+        }
+        .nouveau{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: yellowgreen;
+            text-decoration: none;
+        }
+        .site{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            background-color: #ffffff39;
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            position: relative;
+            bottom: 15px;
+        }
+        .site:hover{
+            background-color: yellowgreen;
+        }
+        .vues{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="../cgi/">
+            <div class="logo"></div>
+        </a>
+        <form action="../cgi/">
+            <input type="text" placeholder="rechercher" name="search" class="inp">
+            <button type="submit" class="button">Rechercher</button>
+        </form>
+        <div class="login_cont">
+            <p class="username">Username</p>
+            <a href="../cgi/" class="deconnexion">Deconnexion</a>
+        </div>
+    </div>
+    <div class="display_sites">
+        <div class="tab">
+            <table>
+                <tr>
+                    <td>
+                        <a href="./index.html" class="nouveau">+</a>
+                    </td>
+                    <td>
+                        <a href="../cgi/" class="site">Nom</a>
+                        <p class="vues">vues : 12</p>
+                    </td>
+                    <td>Colonne 3, Ligne 1</td>
+                </tr>
+                <tr>
+                    <td>Colonne 1, Ligne 2</td>
+                    <td>Colonne 2, Ligne 2</td>
+                    <td>Colonne 3, Ligne 2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
