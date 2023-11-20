@@ -1,0 +1,1 @@
+gcc -o ../../cgi/connexion.cgi fonction.c main.c head.h
